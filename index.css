@@ -1,0 +1,59 @@
+@import url();
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(img.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1{
+    background-color: #333;
+    color: white;
+    padding: 16px;
+}
+body form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 48vh;
+}
+body form label{
+    padding-top: 24px;
+    padding-bottom: 16px;
+    font-size: 28px;
+    font-weight: 600;
+}
+body form input{
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+body form a{
+    font-size: 20px;
+    text-decoration: none;
+}
+body form p a{
+    font-size: 24px;
+}
+body form p{
+    font-size: 20px;
+}
+#sub{
+    cursor: pointer;
+    background-color: #333;
+    color: white;
+    font-size: 16px;
+}
+#sub:hover{
+    background-color: rgb(127, 223, 191);
+    color: black;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+    <h1>New User? Signup Here!</h1>
+    <form id="signupform">
+        <label for="uname">Username</label>
+        <input type="text" placeholder="Enter Username" id="uname" required>
+        <label for="email">Email Id</label>
+        <input type="email" placeholder="Enter your email id" id="email" required>
+        <label for="pass">Password</label>
+        <input type="password" placeholder="Enter a Password" id="pass" required>
+        <label for="confirm">Confirm Password</label>
+        <input type="password" placeholder="Re-enter the password here" id="confirm" required><br>
+        <input type="submit" value="Signup" id="sub">
+    </form>
+    <script>
+        document.getElementById("signupform").addEventListener("submit",function(event){
+            event.preventDefault();
+            const pw= document.getElementById('pass').value;
+            const cn= document.getElementById('confirm').value;
+            if(pw==cn){
+                window.location.href = "index.html";
+            }else{
+                alert(`Re-enter your password correctly`);
+            }
+        });
+    </script>
+</body>
+</html>

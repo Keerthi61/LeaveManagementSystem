@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leave Form</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h1>Login Here!</h1>
+    <form action="backend.php" method="post" id="LoginForm">
+        <label for="Uname">UserName or Email</label>
+        <input type="text" placeholder="Enter Username" id="Uname" name="Username" required>
+        <label for="Password">Password</label>
+        <input type="password" placeholder="Enter Password" id="password" required><br>
+        <a href="forgotPW.html">forgot password?</a><br>
+        <input type="submit" value="Login" id="sub"><br>
+        <p>Don't have account?
+            <a href="signup.html">Signup</a>
+        </p>
+    </form>
+    <script>
+        document.getElementById("LoginForm").addEventListener("submit", function(event){
+            event.preventDefault();
+            window.location.href = "LeaveReq.html";
+        });
+    </script>
+</body>
+</html>

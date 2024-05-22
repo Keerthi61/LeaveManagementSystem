@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leave Management System</title>
+    <link rel="stylesheet" href="LeaveReq.css">
+    <link rel="shortcut icon" href="Leave.png">
+</head>
+<body>
+    <h1>Apply Leave Here!</h1>
+    <h2>Leave Request Submission</h2>
+    <form action="backend.php" method="post" id="leaveForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" size="14" required>
+        <label for="leavetype">Leave Type:</label>
+        <select name="leavetype" id="leavetype" required>
+            <option value="">Select</option>
+            <option value="Annual">Annual Leave</option>
+            <option value="Sick">Sick Leave</option>
+        </select>
+        <label for="startdate">Start Date:</label>
+        <input type="date" id="startdate" name="startdate" required>
+        <label for="enddate">End Date:</label>
+        <input type="date" id="enddate" name="enddate" required><br><br>
+        <button type="submit" id="sub">Submit Request</button>
+    </form>
+    <script>
+        document.getElementById("leaveForm").addEventListener("submit", function(event){
+            const leavetype = document.getElementById('leavetype').value;
+            const startdate = document.getElementById('startdate').value;
+            const enddate = document.getElementById('enddate').value;
+            alert(`Leave Request Submitted for ${leavetype} leave from ${startdate} to ${enddate}`);
+        });
+    </script>
+</body>
+</html>

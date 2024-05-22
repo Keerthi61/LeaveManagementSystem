@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reset Password</title>
+    <link rel="stylesheet" href="forgotPW.css">
+</head>
+<body>
+    <h1>Forgot Password? Reset Here!</h1>
+    <form id="FormF">
+        <label for="uname">Username or Email:</label>
+        <input type="text" placeholder="Enter UserName" id="uname" required>
+        <label for="reset">Reset Password:</label>
+        <input type="password" placeholder="Reset Password" id="reset" required>
+        <label for="confirm">Confirm Password:</label>
+        <input type="password" placeholder="Confirm Password" id="confirm" required><br><br>
+        <input type="submit" value="Submit" id="sub">
+    </form>
+    <script>
+        document.getElementById("FormF").addEventListener("submit",function(event){
+            event.preventDefault();
+            const reset = document.getElementById('reset').value;
+            const confirm = document.getElementById('confirm').value;
+            if(reset==confirm){
+                window.location.href = "index.html";
+            }else{
+                alert(`Confirm Password should be same as reset password`);
+            }
+        });
+    </script>
+</body>
+</html>
